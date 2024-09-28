@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhaj - Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-card">
+        <div class="share-button">
+          <i
+            onclick="navigator.share({url:location.href})"
+            class="ri-share-forward-fill"
+          ></i>
+        </div>
+
+        <div class="inner-container">
+          <img src="./assets/minhaj3.jpg" alt="Image" class="profile-pic" />
+          <h2 class="name">Ansari Md Minhaj</h2>
+          <h3 class="designation">Web Developer</h3>
+          <a href="" class="button"></a>
+          <a href="/profile.html"> <button>View Full Profile</button></a>
+          <span>
+            <div class="links">
+              <a
+                class="icons"
+                href="https://www.linkedin.com/in/ansari-md-minhaj-014177275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              >
+                <i class="ri-linkedin-box-fill"></i
+              ></a>
+              <a
+                class="icons"
+                href="https://www.instagram.com/ansxriminhaj?igsh=MTIyeWc3ZDc1aWhiZw=="
+                ><i class="ri-instagram-fill"></i
+              ></a>
+              <a class="icons" href="mailto:your-email@example.com"
+                ><i class="ri-mail-fill"></i
+              ></a>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Check if the browser supports the Web Share API
+      if (!navigator.share) {
+        document.querySelector(".ri-share-forward-fill").style.display = "none";
+        console.log("Web Share API not supported in this browser.");
+      }
+    </script>
+  </body>
+</html>
